@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Foto's – Villa Bajano</title>
+  <meta name="description" content="Bekijk de foto's van Villa Bajano op Curaçao: zwembad, tuin, interieur, slaapkamers en omgeving.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Domine:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/plugin/swiper/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/bajano.css">
+
+  <style>
+    .bajano-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 0 15px;
+    }
+    @media (max-width: 991px) {
+      .bajano-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 575px) {
+      .bajano-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+    .bajano-gallery-item {
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .bajano-gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .bajano-gallery-item img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Lightbox */
+    #bajano-lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    #bajano-lightbox.active {
+      display: flex;
+    }
+    #bajano-lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    }
+    #bajano-lightbox-close {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 2.5rem;
+      cursor: pointer;
+      line-height: 1;
+      z-index: 10000;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    #bajano-lightbox-close:hover {
+      color: #ccc;
+    }
+    #bajano-lightbox-prev,
+    #bajano-lightbox-next {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      background: rgba(0,0,0,0.4);
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      z-index: 10000;
+    }
+    #bajano-lightbox-prev { left: 15px; }
+    #bajano-lightbox-next { right: 15px; }
+    #bajano-lightbox-prev:hover,
+    #bajano-lightbox-next:hover {
+      background: rgba(0,0,0,0.7);
+    }
+  </style>
+
+  <script src="/js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="thmv-top-nav">
+  <header id="navbar_top" class="thmv-navbar-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav id="cssmenu" class="thmv-top-navbar">
+            <div class="thmv-logo">
+              <a href="/nl"><img src="/images/logo.png" alt="Villa Bajano" style="height:45px;width:auto;"></a>
+            </div>
+            <div id="head-mobile"></div>
+            <div class="thmv-nav-menu ms-auto">
+              <div class="button"></div>
+              <ul class="thmv-nav-menu-list">
+                <li><a href="/nl">Home</a></li>
+                <li class="has-sub"><span class="submenu-button"></span>
+                  <a href="#">Villa</a>
+                  <ul>
+                    <li><a href="/nl/tuin">Tuin</a></li>
+                    <li><a href="/nl/interieur">Interieur</a></li>
+                    <li><a href="/nl/locatie">Locatie</a></li>
+                    <li><a href="/nl/specificaties">Specificaties</a></li>
+                  </ul>
+                </li>
+                <li><a href="/nl/fotos">Foto's</a></li>
+                <li class="has-sub"><span class="submenu-button"></span>
+                  <a href="#">Boeken</a>
+                  <ul>
+                    <li><a href="/nl/tarieven">Tarieven</a></li>
+                    <li><a href="/nl/boeken">Boek nu</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub"><span class="submenu-button"></span>
+                  <a href="#">Language</a>
+                  <ul>
+                    <li><a href="/nl">🇳🇱 Dutch</a></li>
+                    <li><a href="/en">🇬🇧 English</a></li>
+                    <li><a href="/es">🇪🇸 Spanish</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main class="thmv-home-1">
+
+  <!-- HEADING -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-2">
+          <h1>Foto gallery</h1>
+        </div>
+        <div class="col-12 text-center mb-4">
+          <p class="text-muted">Professionele foto's van Villa Bajano, Curaçao. %C2%A9 Inge van Altena</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALLERY GRID -->
+    <div class="bajano-gallery">
+      <div class="bajano-gallery-item" data-index="0">
+        <img src="/images/20240304%C2%A9ingevanaltena_100.jpg" alt="Villa Bajano foto 1">
+      </div>
+      <div class="bajano-gallery-item" data-index="1">
+        <img src="/images/20240304%C2%A9ingevanaltena_102.jpg" alt="Villa Bajano foto 2">
+      </div>
+      <div class="bajano-gallery-item" data-index="2">
+        <img src="/images/20240304%C2%A9ingevanaltena_106.jpg" alt="Villa Bajano foto 3">
+      </div>
+      <div class="bajano-gallery-item" data-index="3">
+        <img src="/images/20240304%C2%A9ingevanaltena_108.jpg" alt="Villa Bajano foto 4">
+      </div>
+      <div class="bajano-gallery-item" data-index="4">
+        <img src="/images/20240304%C2%A9ingevanaltena_111.jpg" alt="Villa Bajano foto 5">
+      </div>
+      <div class="bajano-gallery-item" data-index="5">
+        <img src="/images/20240304%C2%A9ingevanaltena_113.jpg" alt="Villa Bajano foto 6">
+      </div>
+      <div class="bajano-gallery-item" data-index="6">
+        <img src="/images/20240215%C2%A9ingevanaltena_520.jpg" alt="Villa Bajano foto 7">
+      </div>
+      <div class="bajano-gallery-item" data-index="7">
+        <img src="/images/20240215%C2%A9ingevanaltena_522.jpg" alt="Villa Bajano foto 8">
+      </div>
+      <div class="bajano-gallery-item" data-index="8">
+        <img src="/images/20240215%C2%A9ingevanaltena_524.jpg" alt="Villa Bajano foto 9">
+      </div>
+      <div class="bajano-gallery-item" data-index="9">
+        <img src="/images/20240215%C2%A9ingevanaltena_525_2.jpg" alt="Villa Bajano foto 10">
+      </div>
+      <div class="bajano-gallery-item" data-index="10">
+        <img src="/images/20240215%C2%A9ingevanaltena_527.jpg" alt="Villa Bajano foto 11">
+      </div>
+      <div class="bajano-gallery-item" data-index="11">
+        <img src="/images/20240215%C2%A9ingevanaltena_529.jpg" alt="Villa Bajano foto 12">
+      </div>
+      <div class="bajano-gallery-item" data-index="12">
+        <img src="/images/20240215%C2%A9ingevanaltena_531_2.jpg" alt="Villa Bajano foto 13">
+      </div>
+      <div class="bajano-gallery-item" data-index="13">
+        <img src="/images/20240215%C2%A9ingevanaltena_534_2.jpg" alt="Villa Bajano foto 14">
+      </div>
+      <div class="bajano-gallery-item" data-index="14">
+        <img src="/images/20240215%C2%A9ingevanaltena_536.jpg" alt="Villa Bajano foto 15">
+      </div>
+      <div class="bajano-gallery-item" data-index="15">
+        <img src="/images/20240215%C2%A9ingevanaltena_538.jpg" alt="Villa Bajano foto 16">
+      </div>
+      <div class="bajano-gallery-item" data-index="16">
+        <img src="/images/20240215%C2%A9ingevanaltena_540.jpg" alt="Villa Bajano foto 17">
+      </div>
+      <div class="bajano-gallery-item" data-index="17">
+        <img src="/images/20240215%C2%A9ingevanaltena_541.jpg" alt="Villa Bajano foto 18">
+      </div>
+      <div class="bajano-gallery-item" data-index="18">
+        <img src="/images/20240215%C2%A9ingevanaltena_542.jpg" alt="Villa Bajano foto 19">
+      </div>
+      <div class="bajano-gallery-item" data-index="19">
+        <img src="/images/20240215%C2%A9ingevanaltena_545.jpg" alt="Villa Bajano foto 20">
+      </div>
+      <div class="bajano-gallery-item" data-index="20">
+        <img src="/images/20240304%C2%A9ingevanaltena_115.jpg" alt="Villa Bajano foto 21">
+      </div>
+      <div class="bajano-gallery-item" data-index="21">
+        <img src="/images/20240304%C2%A9ingevanaltena_116.jpg" alt="Villa Bajano foto 22">
+      </div>
+      <div class="bajano-gallery-item" data-index="22">
+        <img src="/images/20240304%C2%A9ingevanaltena_117.jpg" alt="Villa Bajano foto 23">
+      </div>
+      <div class="bajano-gallery-item" data-index="23">
+        <img src="/images/20240304%C2%A9ingevanaltena_124.jpg" alt="Villa Bajano foto 24">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div id="bajano-lightbox" role="dialog" aria-modal="true">
+  <button id="bajano-lightbox-close" aria-label="Sluiten">&times;</button>
+  <button id="bajano-lightbox-prev" aria-label="Vorige">&#8249;</button>
+  <img id="bajano-lightbox-img" src="" alt="Villa Bajano foto groot">
+  <button id="bajano-lightbox-next" aria-label="Volgende">&#8250;</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="thmv-foot-small">
+  <section class="thmv-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-3">
+          <span class="bajano-logo-text bajano-logo-footer">Villa Bajano</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 thmv-foot-wedget">
+          <ul>
+            <li><a href="/nl">Home</a></li>
+            <li><a href="/nl/tuin">Tuin</a></li>
+            <li><a href="/nl/interieur">Interieur</a></li>
+            <li><a href="/nl/locatie">Locatie</a></li>
+            <li><a href="/nl/specificaties">Specificaties</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 thmv-foot-wedget">
+          <ul>
+            <li><a href="/nl/fotos">Foto's</a></li>
+            <li><a href="/nl/tarieven">Tarieven</a></li>
+            <li><a href="/nl/boeken">Boeken</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 thmv-foot-wedget">
+          <ul>
+            <li><a href="/en">🇬🇧 English</a></li>
+            <li><a href="/es">🇪🇸 Spanish</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 thmv-foot-wedget">
+          <ul>
+            <li><h6>Contact</h6></li>
+            <li><a href="mailto:info@villabajano.com">info@villabajano.com</a></li>
+            <li><address>Kaya Artiko U05<br>Jan Thiel, Curaçao</address></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="thmv-footer-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 text-center">
+          <p>© Villa Bajano – Kaya Artiko U05, Jan Thiel, Curaçao</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/plugin/swiper/js/swiper-bundle.min.js"></script>
+<script src="/js/custom.js"></script>
+
+<script>
+(function () {
+  var images = Array.from(document.querySelectorAll('.bajano-gallery-item img')).map(function(img) {
+    return img.src;
+  });
+  var currentIndex = 0;
+  var lightbox = document.getElementById('bajano-lightbox');
+  var lightboxImg = document.getElementById('bajano-lightbox-img');
+
+  function openLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = images[index];
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex];
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex];
+  }
+
+  document.querySelectorAll('.bajano-gallery-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      openLightbox(parseInt(item.getAttribute('data-index'), 10));
+    });
+  });
+
+  document.getElementById('bajano-lightbox-close').addEventListener('click', closeLightbox);
+  document.getElementById('bajano-lightbox-prev').addEventListener('click', showPrev);
+  document.getElementById('bajano-lightbox-next').addEventListener('click', showNext);
+
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+})();
+</script>
+
+</body>
+</html>

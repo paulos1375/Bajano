@@ -1,0 +1,186 @@
+/* Villa Bajano custom overrides */
+
+/* ── Transparent nav (homepage only) ── */
+
+/* Transparent state: hide logo, white links */
+.nav-transparent .thmv-top-nav .thmv-logo {
+  opacity: 0;
+  pointer-events: none;
+}
+.nav-transparent .thmv-top-nav .thmv-nav-menu-list > li > a {
+  color: #fff !important;
+}
+
+/* Scrolled: template adds .fixed-top which sets position:fixed + white bg */
+.nav-transparent .thmv-top-nav.fixed-top .thmv-logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+.nav-transparent .thmv-top-nav.fixed-top .thmv-nav-menu-list > li > a {
+  color: #333 !important;
+}
+
+.bajano-logo-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #1a222c;
+  text-decoration: none;
+  font-weight: 700;
+}
+.bajano-logo-text:hover { color: #1a222c; text-decoration: none; }
+.bajano-logo-footer { color: #fff; }
+
+/* Wave logo in hero */
+.thmv-wel-col {
+  background-image: url('/images/wave_logo.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 110% auto;
+}
+.thmv-wel-text {
+  padding-top: 140px;
+}
+.bajano-wave-logo {
+  display: none;
+}
+
+h6.bajano-script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #1a222c;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Hero slider */
+.bajano-hero-slider,
+.hero-swiper,
+.hero-swiper .swiper-wrapper,
+.hero-swiper .swiper-slide {
+  height: 520px;
+}
+.hero-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.bajano-hero-slider .swiper-button-prev,
+.bajano-hero-slider .swiper-button-next {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .bajano-hero-slider,
+  .bajano-hero-slider .swiper,
+  .bajano-hero-slider .swiper-wrapper,
+  .bajano-hero-slider .swiper-slide {
+    height: 280px;
+  }
+}
+
+/* Offer cards */
+.bajano-offer-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+.bajano-offer-card h3 {
+  font-size: 1.2rem;
+  color: #1a222c;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.bajano-offer-card p {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: left;
+}
+
+/* Responsive video embed */
+.bajano-video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.bajano-video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mini sliders in impressie cards */
+.bajano-mini-slider {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+.impressie-swiper,
+.impressie-swiper .swiper-wrapper,
+.impressie-swiper .swiper-slide {
+  height: 260px;
+}
+.impressie-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.impressie-swiper .swiper-button-prev,
+.impressie-swiper .swiper-button-next {
+  color: #fff;
+  --swiper-navigation-size: 22px;
+}
+.impressie-swiper .swiper-pagination-bullet-active {
+  background: #1a222c;
+}
+
+/* Impressie cards */
+.bajano-impressie-card .thmv-card-title {
+  text-align: center;
+  font-family: 'Domine', serif;
+  font-size: 1.3rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #5bc0de;
+  margin-bottom: 0.75rem;
+}
+.bajano-impressie-card .card-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Feature icons */
+.thmv-svg-icon i { color: #1a222c; }
+
+/* CTA section */
+.bajano-cta {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 100px 0;
+}
+.bajano-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 34, 44, 0.72);
+}
+.bajano-cta-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.bajano-cta-content h2 {
+  font-size: 3rem;
+  font-family: 'Domine', serif;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.bajano-cta-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
