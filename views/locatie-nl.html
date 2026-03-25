@@ -81,12 +81,41 @@
           <div class="thmv-wel-text">
             
             <h1 class="thmv-wel-title thmv-br-none">LOCATIE</h1>
-            <p class="thmv-wel-info">Villa Bajano ligt in de wijk Vista Royal in Jan Thiel, op het oostelijke deel van Curaçao. Jan Thiel Beach is op circa 5 minuten lopen. In de directe omgeving vindt u restaurants, een supermarkt, spa, casino en watersport.</p>
+            <p class="thmv-wel-info">Villa Bajano ligt in de wijk Jan Thiel op Curacao. Dat is op het oostelijk gedeelte van het eiland. De hotspot daar is Jan Thiel Beach. Hier bevinden zich meerdere strandtenten, winkels, restaurants, een spa en een casino. Villa Bajano ligt op 5 wandelminuten van Jan Thiel Beach. Op 3 minuten lopen van de villa zit supermarkt Van der Tweel. De wijk heet Vista Royal. Het is een schitterende wijk met vele mooie vrijstaande huizen gelegen op een heuvel. Er liggen echter maar weinig huizen zo dicht bij de ingang van Jan Thiel Beach en toch zo rustig gelegen en zonder elke keer de heuvel op te hoeven lopen!</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-12 px-0">
-          <div class="thmv-top-right-banner">
-            <img src="/images/map_curacao1.jpg" alt="Kaart Curaçao locatie Villa Bajano">
+          <div class="thmv-top-right-banner bajano-map-slider">
+            <div class="map-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/images/map_abc.jpg" alt="ABC eilanden kaart">
+                  <div class="bajano-slide-title">ABC eilanden</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/map_curacao1.jpg" alt="Curacao kaart">
+                  <div class="bajano-slide-title">Curacao</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/map_east_curacao1.jpg" alt="Oostelijk deel van het eiland kaart">
+                  <div class="bajano-slide-title">Oostelijk deel van het eiland</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/map_janthiel1.jpg" alt="Jan Thiel kaart">
+                  <div class="bajano-slide-title">Jan Thiel</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/map_vista_royal1.jpg" alt="Vista Royal kaart">
+                  <div class="bajano-slide-title">Vista Royal</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/map_vistaroyal_street_icons1.jpg" alt="Jan Thiel Beach kaart">
+                  <div class="bajano-slide-title">Jan Thiel Beach</div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -170,7 +199,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mb-3">
-          <span class="bajano-logo-text bajano-logo-footer">Villa Bajano</span>
+          <img src="/images/logo.png" alt="Villa Bajano" class="bajano-footer-logo">
         </div>
       </div>
       <div class="row">
@@ -220,5 +249,14 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/plugin/swiper/js/swiper-bundle.min.js"></script>
 <script src="/js/custom.js"></script>
+<script>
+  new Swiper('.map-swiper', {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+  });
+</script>
 </body>
 </html>

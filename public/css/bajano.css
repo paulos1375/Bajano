@@ -29,6 +29,30 @@
 }
 .bajano-logo-text:hover { color: #1a222c; text-decoration: none; }
 .bajano-logo-footer { color: #fff; }
+.bajano-footer-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Subpage hero — right image fills full height */
+.thmv-header-sec .banner-wrapper {
+  align-items: stretch !important;
+}
+.thmv-header-sec .col-lg-6.px-0 {
+  display: flex;
+}
+.thmv-header-sec .thmv-top-right-banner {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  overflow: hidden;
+}
+.thmv-header-sec .thmv-top-right-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* Wave logo in hero */
 .thmv-wel-col {
@@ -53,11 +77,15 @@ h6.bajano-script {
 }
 
 /* Hero slider */
-.bajano-hero-slider,
+.bajano-hero-slider {
+  height: 100%;
+  min-height: 520px;
+}
 .hero-swiper,
 .hero-swiper .swiper-wrapper,
 .hero-swiper .swiper-slide {
-  height: 520px;
+  height: 100%;
+  min-height: 520px;
 }
 .hero-swiper .swiper-slide img {
   width: 100%;
@@ -70,12 +98,32 @@ h6.bajano-script {
   color: #fff;
 }
 @media (max-width: 768px) {
-  .bajano-hero-slider,
+  .bajano-hero-slider {
+    min-height: 280px;
+  }
   .bajano-hero-slider .swiper,
   .bajano-hero-slider .swiper-wrapper,
   .bajano-hero-slider .swiper-slide {
-    height: 280px;
+    min-height: 280px;
   }
+}
+
+/* Full-width light blue section */
+.bajano-lightblue-section {
+  background-color: #edf4f8;
+  padding: 60px 0;
+  width: 100%;
+}
+.bajano-lightblue-section h2 {
+  color: #1a222c;
+  font-family: 'Domine', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.bajano-lightblue-section p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 /* Offer cards */
@@ -152,13 +200,92 @@ h6.bajano-script {
   color: #444;
 }
 
+/* Image captions */
+.bajano-img-caption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
+/* Map slider in locatie hero */
+.bajano-map-slider {
+  height: 100%;
+  min-height: 520px;
+}
+.map-swiper,
+.map-swiper .swiper-wrapper,
+.map-swiper .swiper-slide {
+  height: 100%;
+  min-height: 520px;
+}
+.map-swiper .swiper-slide {
+  position: relative;
+}
+.map-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.bajano-slide-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(26, 34, 44, 0.65);
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.bajano-map-slider .swiper-button-prev,
+.bajano-map-slider .swiper-button-next {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .bajano-map-slider {
+    min-height: 280px;
+  }
+  .map-swiper,
+  .map-swiper .swiper-wrapper,
+  .map-swiper .swiper-slide {
+    min-height: 280px;
+  }
+}
+
+/* Room section: left text, right 2-col images */
+.bajano-room-section {
+  padding: 70px 0;
+  background: #fff;
+}
+.bajano-room-section h2 {
+  font-family: 'Domine', serif;
+  font-size: 2.6rem;
+  color: #1a222c;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.bajano-room-section p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.bajano-room-section .col-6 img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 /* Feature icons */
 .thmv-svg-icon i { color: #1a222c; }
 
 /* CTA section */
 .bajano-cta {
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   position: relative;
   padding: 100px 0;
 }
@@ -166,7 +293,7 @@ h6.bajano-script {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(26, 34, 44, 0.72);
+  background: rgba(26, 34, 44, 0.45);
 }
 .bajano-cta-content {
   position: relative;
@@ -182,5 +309,6 @@ h6.bajano-script {
 .bajano-cta-content p {
   font-size: 1rem;
   margin-bottom: 2rem;
+  color: #fff;
   opacity: 0.9;
 }
