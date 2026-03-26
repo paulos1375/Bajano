@@ -1,23 +1,20 @@
 /* Villa Bajano custom overrides */
 
-/* ── Transparent nav (homepage only) ── */
-
-/* Transparent state: hide logo, white links */
-.nav-transparent .thmv-top-nav .thmv-logo {
-  opacity: 0;
-  pointer-events: none;
+/* ── Nav: always dark blue, always fixed ── */
+.thmv-top-nav {
+  position: fixed !important;
+  background: #074365 !important;
 }
-.nav-transparent .thmv-top-nav .thmv-nav-menu-list > li > a {
+.thmv-top-nav.fixed-top {
+  background: #074365 !important;
+}
+.thmv-nav-menu-list > li > a,
+.thmv-navbar-light .nav-link,
+.thmv-navbar-light.fixed-top .nav-link {
   color: #fff !important;
 }
-
-/* Scrolled: template adds .fixed-top which sets position:fixed + white bg */
-.nav-transparent .thmv-top-nav.fixed-top .thmv-logo {
-  opacity: 1;
-  pointer-events: auto;
-}
-.nav-transparent .thmv-top-nav.fixed-top .thmv-nav-menu-list > li > a {
-  color: #333 !important;
+.thmv-nav-menu-list > li > a:hover {
+  color: #cce4f0 !important;
 }
 
 .bajano-logo-text {
@@ -32,6 +29,11 @@
 .bajano-footer-logo {
   height: 50px;
   width: auto;
+}
+
+/* Push hero below fixed nav */
+.thmv-header-sec {
+  padding-top: 70px;
 }
 
 /* Subpage hero — right image fills full height */
@@ -62,7 +64,7 @@
   background-size: 110% auto;
 }
 .thmv-wel-text {
-  padding-top: 140px;
+  padding-top: 180px;
 }
 .bajano-wave-logo {
   display: none;
@@ -206,6 +208,50 @@ h6.bajano-script {
   color: #666;
   margin-top: 0.4rem;
   margin-bottom: 0;
+}
+
+/* Tarieven rates box */
+.bajano-rates-box {
+  background: #6aabca;
+  padding: 2rem 2.5rem;
+  border-radius: 4px;
+}
+.bajano-rates-box h3 {
+  color: #1a222c;
+  font-family: 'Domine', serif;
+}
+.bajano-rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+.bajano-rates-table tr {
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+.bajano-rates-table tr:last-child {
+  border-bottom: none;
+}
+.bajano-rates-table td {
+  padding: 0.75rem 0;
+  color: #1a222c;
+  background: transparent;
+  border: none;
+}
+.bajano-rates-details {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #444;
+}
+.bajano-rates-details li {
+  margin-bottom: 0.35rem;
+}
+
+/* Jan Thiel location cards */
+.bajano-location-heading {
+  color: #074365;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Map slider in locatie hero */
