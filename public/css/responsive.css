@@ -2331,7 +2331,12 @@
     }
 
     .thmv-top-navbar .button {
-        top: 43px;
+        top: 37px;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .thmv-top-navbar .button:before {
