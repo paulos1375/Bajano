@@ -411,13 +411,15 @@ h6.bajano-script {
 
   /* Rates box */
   .bajano-rates-box { padding: 1.25rem 1rem; }
+}
 
-  /* "Waarom kiezen gasten" blue bg section — use dynamic bg instead of fixed pseudo-element */
+/* "Waarom kiezen gasten" — columns stack at <992px, use dynamic bg on text col */
+@media (max-width: 991px) {
   .thmv-hostel-service-info {
     background-color: #074365;
     padding: 30px 20px;
   }
   .thmv-blue-bg::before {
-    display: none;
+    display: none !important;
   }
 }
