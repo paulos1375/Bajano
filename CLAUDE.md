@@ -8,10 +8,10 @@ You are rebuilding an existing website originally created with:
 
 The new target is:
 - Clean HTML, CSS, and JavaScript
-- Node.js project structure
-- Deployable on Vercel via GitHub
+- Static site hosted on **GitHub Pages** (repo: paulos1375/Bajano)
+- All pages served under the `/Bajano/` subpath
 
-The website is multilingual (e.g. EN, NL, DE).
+The website is multilingual: **NL, EN, ES**.
 
 Your job is to:
 → Recreate the design as accurately as possible  
@@ -43,7 +43,7 @@ For each page you will receive:
 - HTML template files (see below)
 - Notes about functionality
 - SEO input (keyword, title, meta)
-- Content per language (EN / NL / DE)
+- Content per language (NL / EN / ES)
 
 Follow screenshots strictly.
 
@@ -125,38 +125,46 @@ Examples:
 
 ## ⚙️ Technical Stack
 
-- Node.js (minimal)
+- Static HTML/CSS/JS — no server needed
 - No frameworks (React, Vue, etc.)
 - No build tools unless explicitly requested
-- Must work on Vercel
+- Hosted on GitHub Pages under `/Bajano/` subpath
 
 ---
 
 ## 📁 Project Structure
 
-Use:
-
 /project-root
-  /public
-    /images
-    /css
-    /js
-  /views
-    index-en.html
-    index-nl.html
-    index-de.html
-    [other pages per language]
-  server.js
-  package.json
+  /images
+  /css
+    bajano.css        ← custom overrides (load last)
+    style.css         ← template base styles
+    responsive.css    ← template responsive styles
+  /js
+  /plugin
+  /nl
+    index.html        ← NL home
+    /tarieven
+      index.html
+    /boeken
+      index.html
+    [other pages]
+  /en
+    index.html
+    [other pages]
+  /es
+    index.html
+    [other pages]
+  index.html          ← language detection redirect
 
 ---
 
-## 🚀 Server
+## 🚀 Hosting
 
-- Use a minimal Express server
-- Serve static files from `/public`
-- Serve pages from `/views`
-- Keep it extremely simple
+- **GitHub Pages** — fully static, no server
+- All URLs are under `/Bajano/` (e.g. `paulos1375.github.io/Bajano/nl/`)
+- Every page must include `<base href="/Bajano/">` in `<head>`
+- Use relative paths for all assets and internal links (no leading `/`)
 
 ---
 
@@ -205,7 +213,7 @@ If not specified:
 
 ## 🖼️ Images
 
-- All images are provided locally in `/public/images`
+- All images are provided locally in `/images`
 - Images are large (1500–2500px) and not optimized yet
 
 Rules:
@@ -221,7 +229,7 @@ Rules:
 
 ## 🌍 Multilingual Support
 
-The website is multilingual (EN, NL, DE).
+The website is multilingual: **NL, EN, ES**.
 
 ### Content Handling
 
@@ -234,12 +242,15 @@ The website is multilingual (EN, NL, DE).
 
 ### Structure
 
-- Each language has its own HTML file
+- Each language has its own folder with `index.html` files
 
 Example:
-- index-en.html
-- index-nl.html
-- index-de.html
+- nl/index.html
+- en/index.html
+- es/index.html
+- nl/tarieven/index.html
+- en/tarieven/index.html
+- es/tarieven/index.html
 
 ---
 
@@ -257,7 +268,11 @@ Each language version MUST include:
 
 - Correct `<title>`
 - Correct `<meta description>`
-- Correct `<html lang="">` attribute
+- Correct `<html lang="">` attribute (`nl`, `en`, `es`)
+- Canonical tag pointing to `https://www.villabajano.com/[lang]/[page]`
+- hreflang tags for all 3 language variants
+- Open Graph and Twitter Card meta tags
+- JSON-LD LodgingBusiness schema (on home page)
 - Proper keyword usage
 
 ---
