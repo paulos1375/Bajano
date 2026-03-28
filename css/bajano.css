@@ -362,14 +362,18 @@ h6.bajano-script {
 
 /* ── Mobile nav menu background ── */
 @media (max-width: 991px) {
-  .thmv-top-navbar ul {
+  .thmv-nav-menu,
+  .thmv-nav-menu-list,
+  .thmv-top-navbar ul,
+  .thmv-top-nav .thmv-top-navbar ul,
+  .thmv-top-nav.thmv-top-nav-fix .thmv-top-navbar ul {
     background: #074365 !important;
   }
   .thmv-top-navbar ul li {
     border-top-color: rgba(255,255,255,0.15) !important;
   }
-  .thmv-top-navbar ul li a,
-  .thmv-top-navbar ul ul li a {
+  .thmv-nav-menu-list li a,
+  .thmv-nav-menu-list ul li a {
     color: #fff !important;
   }
 }
