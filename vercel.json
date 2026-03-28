@@ -1,23 +1,21 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "public/**", "use": "@vercel/static" },
-    {
-      "src": "server.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["views/**"]
-      }
-    }
+  "redirects": [
+    { "source": "/", "destination": "/nl", "permanent": false }
   ],
-  "routes": [
-    { "src": "/images/(.*)", "dest": "/public/images/$1" },
-    { "src": "/css/(.*)", "dest": "/public/css/$1" },
-    { "src": "/js/(.*)", "dest": "/public/js/$1" },
-    { "src": "/plugin/(.*)", "dest": "/public/plugin/$1" },
-    { "src": "/favicon.png", "dest": "/public/favicon.png" },
-    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
-    { "src": "/robots.txt", "dest": "/public/robots.txt" },
-    { "src": "/(.*)", "dest": "server.js" }
+  "rewrites": [
+    { "source": "/images/:path*", "destination": "/public/images/:path*" },
+    { "source": "/css/:path*",    "destination": "/public/css/:path*" },
+    { "source": "/js/:path*",     "destination": "/public/js/:path*" },
+    { "source": "/plugin/:path*", "destination": "/public/plugin/:path*" },
+    { "source": "/favicon.png",   "destination": "/public/favicon.png" },
+    { "source": "/favicon.ico",   "destination": "/public/favicon.ico" },
+    { "source": "/robots.txt",    "destination": "/public/robots.txt" },
+    { "source": "/en",            "destination": "/views/index-en.html" },
+    { "source": "/nl",            "destination": "/views/index-nl.html" },
+    { "source": "/es",            "destination": "/views/index-es.html" },
+    { "source": "/en/:page",      "destination": "/views/:page-en.html" },
+    { "source": "/nl/:page",      "destination": "/views/:page-nl.html" },
+    { "source": "/es/:page",      "destination": "/views/:page-es.html" }
   ]
 }
