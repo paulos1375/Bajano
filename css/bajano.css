@@ -411,6 +411,14 @@ h6.bajano-script {
 
   /* Rates box */
   .bajano-rates-box { padding: 1.25rem 1rem; }
+
+  /* CTA buttons: full-width stacked on mobile */
+  .bajano-cta .btn-full-filled {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 0.75rem 0;
+  }
 }
 
 /* "Waarom kiezen gasten" — columns stack at <992px, use dynamic bg on text col */
