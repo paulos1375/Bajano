@@ -360,6 +360,20 @@ h6.bajano-script {
   opacity: 0.9;
 }
 
+/* ── Mobile nav menu background ── */
+@media (max-width: 991px) {
+  .thmv-top-navbar ul {
+    background: #074365 !important;
+  }
+  .thmv-top-navbar ul li {
+    border-top-color: rgba(255,255,255,0.15) !important;
+  }
+  .thmv-top-navbar ul li a,
+  .thmv-top-navbar ul ul li a {
+    color: #fff !important;
+  }
+}
+
 /* ── Mobile overrides (≤ 767px) ── */
 @media (max-width: 767px) {
 
