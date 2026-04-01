@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://www.villabajano.com/nl</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Tarieven -->
+  <url>
+    <loc>https://www.villabajano.com/nl/tarieven</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/tarieven"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/tarieven"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/tarieven"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/en/tarieven</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/tarieven"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/tarieven"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/tarieven"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/es/tarieven</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/tarieven"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/tarieven"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/tarieven"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Boeken -->
+  <url>
+    <loc>https://www.villabajano.com/nl/boeken</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/boeken"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/boeken"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/boeken"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/en/boeken</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/boeken"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/boeken"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/boeken"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/es/boeken</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/boeken"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/boeken"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/boeken"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Locatie -->
+  <url>
+    <loc>https://www.villabajano.com/nl/locatie</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/locatie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/locatie"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/locatie"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/en/locatie</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/locatie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/locatie"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/locatie"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/es/locatie</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/locatie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/locatie"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/locatie"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Interieur -->
+  <url>
+    <loc>https://www.villabajano.com/nl/interieur</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/interieur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/interieur"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/interieur"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/en/interieur</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/interieur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/interieur"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/interieur"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/es/interieur</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/interieur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/interieur"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/interieur"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Tuin -->
+  <url>
+    <loc>https://www.villabajano.com/nl/tuin</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/tuin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/tuin"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/tuin"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/en/tuin</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/tuin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/tuin"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/tuin"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/es/tuin</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/tuin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/tuin"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/tuin"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Fotos -->
+  <url>
+    <loc>https://www.villabajano.com/nl/fotos</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/fotos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/fotos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/fotos"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/en/fotos</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/fotos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/fotos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/fotos"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/es/fotos</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/fotos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villabajano.com/en/fotos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.villabajano.com/es/fotos"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
