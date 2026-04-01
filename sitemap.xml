@@ -158,6 +158,29 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- SEO Landing Pages (NL only) -->
+  <url>
+    <loc>https://www.villabajano.com/nl/villa-huren-jan-thiel-curacao</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/villa-huren-jan-thiel-curacao"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.villabajano.com/nl/villa-huren-jan-thiel-curacao"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/nl/vakantievilla-curacao-6-personen</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/vakantievilla-curacao-6-personen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.villabajano.com/nl/vakantievilla-curacao-6-personen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.villabajano.com/nl/vakantievilla-curacao-privezwembad</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.villabajano.com/nl/vakantievilla-curacao-privezwembad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.villabajano.com/nl/vakantievilla-curacao-privezwembad"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Fotos -->
   <url>
     <loc>https://www.villabajano.com/nl/fotos</loc>
