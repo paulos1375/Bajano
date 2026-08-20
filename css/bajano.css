@@ -1,5 +1,12 @@
 /* Villa Bajano custom overrides */
 
+/* ── Force white page background (prevents black bg in Chrome + macOS dark mode) ── */
+html,
+body {
+  background-color: #fff !important;
+  color-scheme: light !important;
+}
+
 /* ── Nav: always dark blue, always fixed ── */
 .thmv-top-nav {
   position: fixed !important;
